@@ -1,0 +1,21 @@
+[
+{
+  "modid": "HouseBuilder",
+  "name": "House Builder",
+  "description": "Build houses automatically :)",
+  "version": "@Version@",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+   "Original: Meees",
+   "Zodsmar"
+  ],
+  "credits": "Original author Meees updated by Zodsmar!",
+"logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
