@@ -1,0 +1,5 @@
+clear/copy/paste update only after reopening the gui or switching layers
+layer switch resets the mouse
+recipes missing
+sometimes items pop out of the gui
+stack in the hand and clicking on buttons causes them to vanish
