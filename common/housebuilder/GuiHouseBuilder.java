@@ -3,8 +3,7 @@ package housebuilder;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -20,13 +19,13 @@ public class GuiHouseBuilder extends GuiContainer
 
     private EntityPlayer player;
     @SuppressWarnings("unused")
-	private IInventory in;
+	private InventoryPlayer in;
 
-    public GuiHouseBuilder(IInventory iinventory, TileEntity tileentity, int i, EntityPlayer entityplayer)
+    public GuiHouseBuilder(InventoryPlayer invPlayer, TileEntityHouseBuilder tileentity, int i, EntityPlayer entityplayer)
     {
-        super(new ContainerHouseBuilder(iinventory, tileentity, i));
-        in = iinventory;
-        tileEntity = (TileEntityHouseBuilder)tileentity;
+        super(new ContainerHouseBuilder(invPlayer, tileentity, i));
+        in = invPlayer;
+        tileEntity = tileentity;
         level = i;
         player = entityplayer;
     }
@@ -104,25 +103,25 @@ public class GuiHouseBuilder extends GuiContainer
 
         if (guibutton.id == 2)
         {
-            TileEntityHouseBuilder tileentityhousebuilder = (TileEntityHouseBuilder)tileEntity;
+            TileEntityHouseBuilder tileentityhousebuilder = tileEntity;
             tileentityhousebuilder.createHouse(player);
         }
         
         if (guibutton.id == 3)
         {
-            TileEntityHouseBuilder tileentityhousebuilder1 = (TileEntityHouseBuilder)tileEntity;
+            TileEntityHouseBuilder tileentityhousebuilder1 = tileEntity;
             tileentityhousebuilder1.copy(player);
         }
 
         if (guibutton.id == 4)
         {
-            TileEntityHouseBuilder tileentityhousebuilder2 = (TileEntityHouseBuilder)tileEntity;
+            TileEntityHouseBuilder tileentityhousebuilder2 = tileEntity;
             tileentityhousebuilder2.paste(player);
         }
 
         if (guibutton.id == 5)
         {
-            TileEntityHouseBuilder tileentityhousebuilder3 = (TileEntityHouseBuilder)tileEntity;
+            TileEntityHouseBuilder tileentityhousebuilder3 = tileEntity;
             tileentityhousebuilder3.clear(player);
         }
     }

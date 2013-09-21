@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 
 public class SlotHouseBuilder extends Slot
 {
-    @SuppressWarnings("unused")
 	public SlotHouseBuilder(IInventory iinventory, int i, int j, int k)
     {
         super(iinventory, i, j, k);
@@ -32,6 +31,6 @@ public class SlotHouseBuilder extends Slot
     public boolean isItemValid(ItemStack itemstack)
     {
         int i = itemstack.getItem().itemID;
-        return i != 3006 || i == Item.bucketWater.itemID || i == Item.bucketLava.itemID || i == Item.redstone.itemID || i == Item.minecartEmpty.itemID || i == Item.boat.itemID || i == Item.minecartPowered.itemID || i == Item.minecartCrate.itemID;
+        return i <= 256 || i == Item.bucketWater.itemID || i == Item.bucketLava.itemID || i == Item.redstone.itemID || i == Item.minecartEmpty.itemID || i == Item.boat.itemID || i == Item.minecartPowered.itemID || i == Item.minecartCrate.itemID;
     }
 }
