@@ -50,7 +50,7 @@ public class GuiHouseBuilder extends GuiContainer
     {
     	
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.renderEngine.func_110577_a(tex1);
+        this.mc.renderEngine.bindTexture(tex1);
         int i1 = (width - xSize) / 2 - 100;
         int j1 = (height - ySize) / 2 - 35;
         this.buttonList.clear();
@@ -61,7 +61,7 @@ public class GuiHouseBuilder extends GuiContainer
         this.buttonList.add(new GuiButton(4, i1 + 296, j1 + 102, 40, 20, "Paste"));
         this.buttonList.add(new GuiButton(5, i1 + 296, j1 + 138, 40, 20, "Clear"));
         drawTexturedModalRect(i1, j1, 0, 0, 256, 256);
-        this.mc.renderEngine.func_110577_a(tex2);
+        this.mc.renderEngine.bindTexture(tex2);
         drawTexturedModalRect(i1 + 180, j1, 0, 0, 256, 256);
         fontRenderer.drawString((new StringBuilder()).append("Level: ").append(level).toString(), i1 + 220, j1 + 105, 0);
     }
